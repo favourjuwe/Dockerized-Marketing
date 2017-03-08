@@ -1,0 +1,34 @@
+{
+  "name": "dockerized-marketing",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "description": "DockerizedMarketing",
+  "author": {
+    "name": "Administrator",
+    "email": "winnexrd@gmail.com"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.0",
+    "cookie-parser": "~1.3.3",
+    "debug": "~2.0.0",
+    "ejs": "^2.5.6",
+    "express": "^4.15.0",
+    "express-jwt": "^3.4.0",
+    "express-session": "^1.15.1",
+    "jade": "~1.6.0",
+    "jsonwebtoken": "^5.7.0",
+    "lodash": "^3.10.1",
+    "mongodb": "^2.2.24",
+    "mongoskin": "^2.1.0",
+    "morgan": "~1.3.0",
+    "q": "^1.4.1",
+    "request": "^2.79.0",
+    "rootpath": "^0.1.2",
+    "serve-favicon": "~2.1.3",
+    "stylus": "0.42.3"
+  }
+}

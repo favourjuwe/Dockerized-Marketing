@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Dockerized  Marketing</title>
+    <link rel="" stylesheet"" href=""/styles/site.css"">
+</head>
+<body>
+
+
+
+
+
+
+    <div class="" container"">
+        <div class="" text-center"" ng-app="" moviesApp"" ng-controller="" MoviesCtrl"">
+            <h1>Node-Express Movie List</h1>
+            <div class="" col-md-12" control-group"="">
+                <input style="" width:" 200px;"="" ng-model="" newMovieText"" type="" text"">
+                <button id="" btnAddTodo"" class="" btn"" style="" margin:" 2px;"="" ng-click="" addMovie()"" ng-disabled="" !newMovieText"">Add Movie</button>
+            </div>
+
+            <div class="" col-md-5" sticky-note"="">
+                <h3 class="" text-center"">Released Movies</h3>
+                <div class="" col-md-5" rowmargin="" todoitem"="" ng-repeat="" movie" in="" movies="" |="" filter:{released:true}"="">
+                    <div class="" thumbnail"">
+                        <input ng-model="" movie.watched"" ng-change="" movieWatched(movie)"" type="" checkbox"">
+
+                        <span ng-class="" {watchedMovie:" movie.watched}"="">{{movie.name}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="" col-md-5" sticky-note"="">
+                <h3 class="" text-center"">Coming Up...</h3>
+                <div class="" col-md-5" rowmargin="" todoitem"="" ng-repeat="" movie" in="" movies="" |="" filter:{released:false}"="">
+                    <div class="" thumbnail"">
+                        {{movie.name}}
+                        <br>
+                        <br>
+                        <input value="" Released!"" class="" btn" btn-link="" released-button"="" ng-click="" movieReleased(movie)"" style="" "" type="" button"">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="" https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js""></script>
+    <script src=""/scripts/movies.js""></script>
+
+</body>
+</html>
